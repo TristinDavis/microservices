@@ -3,4 +3,19 @@
 We can conduct eventstorming in different sessions to explore business more with related
 stakeholder.
 
-=== Session - 1:
+---
+=== SESSION->1:
+
+image::ES-SESSION-1.jpg[Eventstorming session-1]
+
+---
+
+---
+=== SESSION->2:
+
+
+---
+
+=== REFERENCES
+- https://realtimeboard.com/
+- https://github.com/mariuszgil/awesome-eventstorming
