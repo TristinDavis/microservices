@@ -1,4 +1,17 @@
 = Microservices
 
+image:https://img.shields.io/github/license/bhuwanupadhyay/microservices.svg?style=for-the-badge["GitHub license",link="https://github.com/bhuwanupadhyay/microservices/blob/master/LICENSE"]
+
 Developing microservices is not easy task if we don't have
 right kind of expertize, clear business requirements and proper plan.
+
+image:https://badge.waffle.io/bhuwanupadhyay/microservices.svg?columns=all&style=flat-square["Waffle.io - Columns and their card count", link="https://waffle.io/bhuwanupadhyay/microservices"]
+
+== Project Conventions
+-> Layers
+
+image:https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/microservice-ddd-cqrs-patterns/media/image6.png["Layers in a Domain-Driven Design Microservice", link="https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/microservice-ddd-cqrs-patterns/ddd-oriented-microservice"]
+
+=== References
+* https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns
+* https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/microservice-ddd-cqrs-patterns/ddd-oriented-microservice
