@@ -1,1 +1,6 @@
 = Eventstorming -> Order Management System
+
+We can conduct eventstorming in different sessions to explore business more with related
+stakeholder.
+
+=== Session - 1:
