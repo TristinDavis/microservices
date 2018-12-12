@@ -1,0 +1,19 @@
+buildscript {
+    repositories {
+        gradlePluginPortal()
+    }
+    dependencies {
+        classpath 'com.bmuschko:gradle-docker-plugin:4.0.0'
+    }
+}
+
+apply plugin: 'com.bmuschko.docker-remote-api'
+
+allprojects {
+    group = 'io.github.bhuwanupadhyay'
+    version = '1.0-SNAPSHOT'
+}
+
+import com.bmuschko.gradle.docker.tasks.DockerInfo
+
+task checkDockerIsAvailable(type: DockerInfo)
