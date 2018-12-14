@@ -28,3 +28,9 @@ image::docs/cqrs.jpg[]
 * Focus on tasks
 * Don't start until you understand input and output of each business workflow
 * Learn enough rules to implement each business process
+
+== Eventstorming
+* Think of the events in your domain
+* Write description on sticky notes
+* Add sticky notes to the timeline
+* Now order notes as appropriate
