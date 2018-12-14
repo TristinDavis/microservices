@@ -34,3 +34,7 @@ image::docs/img/cqrs.jpg[]
 * Write description on sticky notes
 * Add sticky notes to the timeline
 * Now order notes as appropriate
+
+== Development Flow
+
+*Eventstorming* -> *Wireframes* -> *Customer Verification* -> *CQRS + DDD*
