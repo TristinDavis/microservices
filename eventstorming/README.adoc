@@ -4,15 +4,9 @@ We can conduct eventstorming in different sessions to explore business more with
 stakeholder.
 
 ---
-=== SESSION->1:
+=== Order Process:
 
-image::ES-SESSION-1.jpg[Eventstorming session-1]
-
----
-
----
-=== SESSION->2:
-
+image::ES-SESSION - Order Process.jpg[Eventstorming]
 
 ---
 
