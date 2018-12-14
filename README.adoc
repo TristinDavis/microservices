@@ -41,6 +41,10 @@ image::docs/img/cqrs.jpg[]
 
 *Eventstorming* -> *Wireframes* -> *Customer Verification* -> *CQRS + DDD*
 
+Wireframe -> Command -> Workflow -> Persistence -
+                                                |
+          -> Query                              <-
+
 == Team Friendly
 
 *Simplified Design* -> *Reduced risk of design errors* -> *Reduced need super-skills* -> managing project becomes easy.
