@@ -14,7 +14,7 @@ image:https://docs.microsoft.com/en-us/dotnet/standard/microservices-architectur
 
 -> CQRS
 
-image::docs/cqrs.jpg[]
+image::docs/img/cqrs.jpg[]
 
 == Requirement Survival Guide
 
