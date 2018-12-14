@@ -43,4 +43,4 @@ image::docs/img/cqrs.jpg[]
 
 == Team Friendly
 
-* Simplified Design* -> *Reduced risk of design errors* -> *Reduced need super-skills* -> managing project becomes easy.
+*Simplified Design* -> *Reduced risk of design errors* -> *Reduced need super-skills* -> managing project becomes easy.
