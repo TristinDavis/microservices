@@ -16,3 +16,14 @@ image:https://docs.microsoft.com/en-us/dotnet/standard/microservices-architectur
 
 image::docs/cqrs.jpg[]
 
+== Requirement Survival Guide
+
+*Terms:* BUSINESS -> FUNCTIONS -> CONDITIONS -> FEATURES
+
+*Development Fact:* The sooner you code; the later you finish
+
+*Mitigation Side Effects:*
+* Ubiquitous language everywhere
+* Focus on tasks
+* Don't start until you understand input and output of each business workflow
+* Learn enough rules to implement each business process
