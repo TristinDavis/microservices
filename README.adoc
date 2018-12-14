@@ -23,6 +23,7 @@ image::docs/cqrs.jpg[]
 *Development Fact:* The sooner you code; the later you finish
 
 *Mitigation Side Effects:*
+
 * Ubiquitous language everywhere
 * Focus on tasks
 * Don't start until you understand input and output of each business workflow
