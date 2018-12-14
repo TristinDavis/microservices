@@ -9,7 +9,3 @@ stakeholder.
 image::ES-SESSION - Order Process.jpg[Eventstorming]
 
 ---
-
-=== REFERENCES
-- https://realtimeboard.com/
-- https://github.com/mariuszgil/awesome-eventstorming
