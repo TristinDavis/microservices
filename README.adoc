@@ -16,6 +16,8 @@ image:https://docs.microsoft.com/en-us/dotnet/standard/microservices-architectur
 
 image::docs/img/cqrs.jpg[]
 
+"```The purpose of software engineering is to control complexity, not to create it.```" - Dr. Pamela Zave
+
 == Requirement Survival Guide
 
 *Terms:* BUSINESS -> FUNCTIONS -> CONDITIONS -> FEATURES
@@ -38,3 +40,5 @@ image::docs/img/cqrs.jpg[]
 == Development Flow
 
 *Eventstorming* -> *Wireframes* -> *Customer Verification* -> *CQRS + DDD*
+
+== FQA->CQRS
