@@ -41,9 +41,8 @@ image::docs/img/cqrs.jpg[]
 
 *Eventstorming* -> *Wireframes* -> *Customer Verification* -> *CQRS + DDD*
 
-Wireframe -> Command -> Workflow -> Persistence -
-                                                 |
-          -> Query                             <-
+* Wireframe -> Command -> Workflow -> Persistence
+* Wireframe -> Query
 
 == Team Friendly
 
