@@ -1,6 +1,7 @@
 package io.github.bhuwanupadhyay.ordering.command;
 
 import io.github.bhuwanupadhyay.ordering.CommandBus;
+import io.github.bhuwanupadhyay.ordering.contract.EndpointResponse;
 import io.github.bhuwanupadhyay.ordering.contract.gen.OrderRequest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -10,6 +11,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.verify;
 
@@ -28,13 +30,14 @@ class CommandEndpointsUnitTest {
     }
 
     @Test
-    void givenOrderRequest_whenPlace_thenShouldGenerateOrderPlaceCommand() {
-        endpoints.placeOrder(
+    void givenOrderRequest_whenPlace_thenShouldPlaced() {
+        EndpointResponse<Void> response = endpoints.placeOrder(
                 OrderRequest.
                         newBuilder()
                         .setCustomerId("customer-id")
                         .build()
         );
         verify(bus).move(any(OrderPlaceCommand.class));
+        assertEquals("PLACED", response.getMessage());
     }
 }

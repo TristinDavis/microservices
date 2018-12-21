@@ -32,12 +32,15 @@ dependencies {
     compile "com.google.protobuf:protobuf-java:3.6.1"
     compile 'com.googlecode.protobuf-java-format:protobuf-java-format:1.4'
 
+    testCompileOnly "org.projectlombok:lombok:1.16.22"
     testCompile 'org.assertj:assertj-core:3.11.1'
     testCompile 'org.mockito:mockito-junit-jupiter:2.23.0'
     testCompile 'org.junit.jupiter:junit-jupiter-engine:5.1.0'
     testCompile 'org.junit.jupiter:junit-jupiter-params:5.1.0'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
     testCompile 'io.projectreactor:reactor-test'
+    testCompile 'io.rest-assured:rest-assured:3.2.0'
+
 }
 
 [bootJar, bootRun]*.enabled = true
