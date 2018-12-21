@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
+import {OmsConstants} from "../base";
 
 @Component({
   selector: 'oms-login',
@@ -19,6 +20,7 @@ export class LoginComponent implements OnInit {
 
   login(): void {
     if (this.username == 'admin' && this.password == 'admin') {
+      // noinspection JSIgnoredPromiseFromCall
       this.router.navigate(["user"]);
     } else {
       alert("Invalid credentials");
@@ -30,6 +32,7 @@ export class LoginComponent implements OnInit {
   }
 
   signUp() {
-
+    // noinspection JSIgnoredPromiseFromCall
+    this.router.navigate([OmsConstants.REGISTER_PAGE_URI]);
   }
 }

@@ -15,4 +15,12 @@ export class OmsConstants {
     return OmsConstants.BASE_PAGE_URI + '/' + OmsConstants.LOGIN
   };
 
+  public static get REGISTER(): string {
+    return 'register'
+  };
+
+  public static get REGISTER_PAGE_URI(): string {
+    return OmsConstants.BASE_PAGE_URI + '/' + OmsConstants.REGISTER
+  };
+
 }

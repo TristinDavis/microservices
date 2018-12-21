@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {LoginComponent} from "./login/login.component";
 import {OmsConstants} from "./base";
+import {RegisterComponent} from "./register/register.component";
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
       {
         path: OmsConstants.LOGIN,
         component: LoginComponent
+      },
+      {
+        path: OmsConstants.REGISTER,
+        component: RegisterComponent
       }
     ]
   }
