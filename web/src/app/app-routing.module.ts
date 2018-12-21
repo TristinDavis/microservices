@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: OmsConstants.LOGIN_PAGE_URI,
+    redirectTo: OmsConstants.BASE_PAGE_URI,
   },
   {
     path: OmsConstants.OMS,
