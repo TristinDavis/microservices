@@ -11,3 +11,10 @@ unit:
 	$(MAKE) jooq && \
 	$(MAKE) proto && \
 	./gradlew test
+ui:
+	cd web && \
+	ng serve --open
+gen-ui:
+	ng new web --prefix oms && \
+	cd web && \
+	ng add @angular/material
