@@ -9,4 +9,5 @@ findProject(':ordering:ordering-api')?.name = 'ordering-api'
 
 include 'ordering:ordering-infrastructure'
 findProject(':ordering:ordering-infrastructure')?.name = 'ordering-infrastructure'
+include 'idm'
 

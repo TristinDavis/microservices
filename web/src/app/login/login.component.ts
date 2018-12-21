@@ -25,4 +25,11 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  signInByGoogle() {
+
+  }
+
+  signUp() {
+
+  }
 }

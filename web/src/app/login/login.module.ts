@@ -8,6 +8,7 @@ import {
   MatGridListModule,
   MatIconModule,
   MatInputModule,
+  MatTableModule,
   MatToolbarModule
 } from "@angular/material";
 import {FormsModule} from "@angular/forms";
@@ -22,6 +23,7 @@ import {FormsModule} from "@angular/forms";
     FormsModule,
     MatCardModule,
     MatGridListModule,
+    MatTableModule,
     MatFormFieldModule,
     MatInputModule
   ]
