@@ -1,12 +1,13 @@
 package io.github.bhuwanupadhyay.ordering.query;
 
 
-import io.github.bhuwanupadhyay.ordering.EndpointResponse;
+import io.github.bhuwanupadhyay.ordering.contract.EndpointResponse;
+import io.github.bhuwanupadhyay.ordering.contract.IQueryEndpoints;
+import io.github.bhuwanupadhyay.ordering.contract.gen.OrderView;
 import io.github.bhuwanupadhyay.ordering.query.gen.tables.records.OmsOrderRecord;
 import lombok.RequiredArgsConstructor;
 import org.jooq.DSLContext;
 import org.jooq.Result;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,19 +19,20 @@ import static java.util.stream.Collectors.toList;
 @RestController
 @RequestMapping(QueryEndpoints.ORDERS)
 @RequiredArgsConstructor
-public class QueryEndpoints {
+public class QueryEndpoints implements IQueryEndpoints {
 
-    public static final String ORDERS = "/orders";
+    static final String ORDERS = "/orders";
     private final DSLContext dsl;
 
-    @GetMapping
-    public EndpointResponse<List<OrderView>> listOrders() {
+    @Override
+    public EndpointResponse<List<OrderView>> getOrders() {
         Result<OmsOrderRecord> records = dsl.selectFrom(OMS_ORDER).fetch();
         return new EndpointResponse<>(toViews(records));
     }
 
     private List<OrderView> toViews(Result<OmsOrderRecord> records) {
-        return records.stream().map(OrderView::new).collect(toList());
+        return records.stream()
+                .map(record -> OrderView.newBuilder()
+                        .build()).collect(toList());
     }
-
 }

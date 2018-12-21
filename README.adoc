@@ -47,3 +47,47 @@ image::docs/img/cqrs.jpg[]
 == Team Friendly
 
 *Simplified Design* -> *Reduced risk of design errors* -> *Reduced need super-skills* -> managing project becomes easy.
+
+== Software rots or decays
+* Duplication
+* Excess coupling
+* Quick Fixes
+* Hacks
+* Technical Debt
+
+== Refactoring Principles
+* Keep it Simple
+* Keep it DRY
+* Make it Expressive
+* Reduce Overall Code
+* Separate Concerns
+* Appropriate Level of Abstraction
+
+== Kent Beck's Rules of Simple Desing
+* Run all the tests
+* Contain no duplicate code
+* Express all the ideas the authors want to express
+* Minimize classes and methods
+
+"```Leave your code better than you found it.```" - Boy Scout
+
+== Refactoring Tips
+* Keep Refactoring Small
+* One At A Time
+* Make a Checklist
+* Make a "Later" list
+* Check in Frequently
+* Add Test Cases
+* Review the Results
+
+
+== Premature Optimization
+
+"```Premature optimization is the root of all [software] evil.```" - Donal Knuth
+
+* Avoid over-engineering - Follow YAGNI
+* Don't spend more time on refactoring than on delivering value - Avoid Gold-Plating your code
+
+== Refactoring and Tests
+* Treat Tests like Production Code
+* Keep Them DRY, but Expressive

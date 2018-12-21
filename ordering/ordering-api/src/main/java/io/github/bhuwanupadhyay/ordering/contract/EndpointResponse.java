@@ -1,4 +1,4 @@
-package io.github.bhuwanupadhyay.ordering;
+package io.github.bhuwanupadhyay.ordering.contract;
 
 import lombok.Data;
 

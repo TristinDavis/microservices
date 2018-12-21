@@ -1,6 +1,7 @@
 package io.github.bhuwanupadhyay.ordering.query;
 
-import io.github.bhuwanupadhyay.ordering.EndpointResponse;
+import io.github.bhuwanupadhyay.ordering.contract.EndpointResponse;
+import io.github.bhuwanupadhyay.ordering.contract.gen.OrderView;
 import io.github.bhuwanupadhyay.ordering.query.gen.tables.records.OmsOrderRecord;
 import org.jooq.DSLContext;
 import org.jooq.Result;
@@ -37,7 +38,7 @@ class QueryEndpointsUnitTest {
     @Test
     void canReturnNullSafeListOrders() {
         when(context.selectFrom(OMS_ORDER).fetch()).thenReturn(orderRecords());
-        EndpointResponse<List<OrderView>> response = queryEndpoints.listOrders();
+        EndpointResponse<List<OrderView>> response = queryEndpoints.getOrders();
         assertNotNull(response);
         assertThat(response.getBody()).isNotNull().hasSize(ZERO);
     }
@@ -45,7 +46,7 @@ class QueryEndpointsUnitTest {
     @Test
     void canReturnAutomaticallyGeneratedAt() {
         when(context.selectFrom(OMS_ORDER).fetch()).thenReturn(orderRecords());
-        EndpointResponse<List<OrderView>> response = queryEndpoints.listOrders();
+        EndpointResponse<List<OrderView>> response = queryEndpoints.getOrders();
         assertNotNull(response.getGeneratedAt());
     }
 
