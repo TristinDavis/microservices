@@ -9,5 +9,4 @@ gen-c:
 	ng g c $${componentName}
 ui:
 	ng serve --open
-pact:
-	npm run pact:test && npm run pact:publish
+
