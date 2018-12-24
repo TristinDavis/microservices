@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot} from '@angular/router';
 import {Observable} from 'rxjs';
-import {LOGIN_PAGE_URI} from "../base";
+import {OmsConstants} from "../base";
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +18,7 @@ export class AuthGuard implements CanActivate {
     //   return true;
     // }
     // noinspection JSIgnoredPromiseFromCall
-    this.router.navigate([LOGIN_PAGE_URI], {queryParams: next.queryParams});
+    this.router.navigate([OmsConstants.LOGIN_PAGE_URI], {queryParams: next.queryParams});
     return false;
   }
 }
