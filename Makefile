@@ -18,3 +18,5 @@ gen-ui:
 	ng new web --prefix oms && \
 	cd web && \
 	ng add @angular/material
+infra:
+	docker-compose rm && docker-compose up
