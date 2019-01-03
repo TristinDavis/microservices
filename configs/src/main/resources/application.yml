@@ -4,4 +4,4 @@ spring:
       server:
         git:
           uri: https://github.com/BhuwanUpadhyay/microservices.git
-          default-label: configs
+          default-label: configs #specifying git branch name
