@@ -12,9 +12,11 @@ sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
 dependencies {
-    compile 'org.springframework.cloud:spring-cloud-starter'
     compile 'org.springframework.cloud:spring-cloud-config-server'
+    compile 'org.springframework.cloud:spring-cloud-starter'
+    compile 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
     compile 'org.springframework.retry:spring-retry'
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
 
     testCompileOnly "org.projectlombok:lombok"
     testCompile 'org.assertj:assertj-core:3.11.1'
