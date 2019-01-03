@@ -12,6 +12,7 @@ sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
 dependencies {
+    compile 'org.springframework.cloud:spring-cloud-config-client'
     compile 'org.springframework.cloud:spring-cloud-starter'
     compile 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server'
     compile 'org.springframework.retry:spring-retry'

@@ -1,6 +1,10 @@
 spring:
+  application:
+    name: configs
   cloud:
     config:
       server:
         git:
           uri: file://${app.root.dir}/microservices
+server:
+  port: 8888
