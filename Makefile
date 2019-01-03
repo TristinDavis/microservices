@@ -20,3 +20,5 @@ gen-ui:
 	ng add @angular/material
 infra:
 	docker-compose rm && docker-compose up
+rabbit:
+	docker-compose rm rabbitmq && docker-compose up rabbitmq
