@@ -15,7 +15,7 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 @RequiredArgsConstructor
 class Routes {
 
-    private final InventoryHandler handler;
+    private final InventoryWebHandler handler;
 
     @Bean
     RouterFunction<ServerResponse> routes() {
@@ -24,7 +24,7 @@ class Routes {
                 nest(
                         accept(APPLICATION_JSON),
                         route(POST("/")
-                                .and(contentType(APPLICATION_JSON)), handler::createPerson)
+                                .and(contentType(APPLICATION_JSON)), handler::createProduct)
                 )
         );
     }
