@@ -14,7 +14,7 @@ class InventoryRoutesIntegrationTests {
                 .accept(ContentType.JSON)
                 .baseUri("http://localhost:" + 9001)
                 .body("{ \"name\" : \"Watch\"}")
-                .post("/inventories")
+                .post("/products")
                 .then()
                 .statusCode(HttpStatus.SC_OK);
     }
