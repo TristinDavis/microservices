@@ -9,3 +9,8 @@ targetCompatibility = JavaVersion.VERSION_1_8
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.25'
 }
+
+repositories{
+    jcenter()
+    mavenCentral()
+}

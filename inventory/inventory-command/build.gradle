@@ -14,8 +14,8 @@ targetCompatibility = JavaVersion.VERSION_1_8
 dependencies {
     compile project(":inventory:inventory-kernel")
 
-    compile 'org.axonframework:axon-amqp:2.4.3'
-    compile 'org.axonframework:axon-mongo:2.4.3'
+    compile 'org.axonframework:axon-amqp:3.4.2'
+    compile 'org.axonframework:axon-mongo:3.4.2'
 
     compile 'org.springframework.cloud:spring-cloud-starter'
     compile 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
@@ -36,7 +36,7 @@ dependencies {
     testCompile 'org.springframework.boot:spring-boot-starter-test'
     testCompile 'io.projectreactor:reactor-test'
     testCompile 'io.rest-assured:rest-assured:3.2.0'
-    testCompile 'org.axonframework:axon-test:2.4.3'
+    testCompile 'org.axonframework:axon-test:3.4.2'
 
 }
 
