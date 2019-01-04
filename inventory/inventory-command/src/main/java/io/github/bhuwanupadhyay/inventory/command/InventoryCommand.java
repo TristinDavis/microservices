@@ -6,7 +6,7 @@ import org.springframework.util.Assert;
 
 @SuppressWarnings("WeakerAccess")
 @Getter
-public class InventoryCommand<T> {
+public abstract class InventoryCommand<T> {
     @TargetAggregateIdentifier
     public final T id;
 

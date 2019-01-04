@@ -4,7 +4,7 @@ import lombok.Getter;
 
 @SuppressWarnings("WeakerAccess")
 @Getter
-public class InventoryEvent<T> {
+public abstract class InventoryEvent<T> {
 
     public final T id;
 
