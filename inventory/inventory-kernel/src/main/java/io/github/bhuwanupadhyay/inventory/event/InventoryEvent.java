@@ -1,7 +1,8 @@
-package io.github.bhuwanupadhyay.inventory;
+package io.github.bhuwanupadhyay.inventory.event;
 
 import lombok.Getter;
 
+@SuppressWarnings("WeakerAccess")
 @Getter
 public class InventoryEvent<T> {
 

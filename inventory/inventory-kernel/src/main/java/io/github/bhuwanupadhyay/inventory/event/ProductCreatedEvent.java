@@ -1,7 +1,6 @@
 package io.github.bhuwanupadhyay.inventory.event;
 
 
-import io.github.bhuwanupadhyay.inventory.InventoryEvent;
 import lombok.Getter;
 
 @Getter
