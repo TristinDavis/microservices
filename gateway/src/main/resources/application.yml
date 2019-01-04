@@ -16,6 +16,9 @@ spring:
           predicates:
             - Path=/inventory/
             - Method=GET
+      discovery:
+        locator:
+          enabled: true
 
 server:
   port: 8080

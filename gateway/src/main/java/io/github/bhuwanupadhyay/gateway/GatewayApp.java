@@ -12,18 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@RestController
-@EnableConfigurationProperties(DiscoveryLocatorProperties.class)
 public class GatewayApp {
 
     public static void main(String[] args) {
         SpringApplication.run(GatewayApp.class, args);
-    }
-
-    @Bean
-    public DiscoveryClientRouteDefinitionLocator discoveryClientRouteLocator(DiscoveryClient discoveryClient,
-                                                                             DiscoveryLocatorProperties properties) {
-        return new DiscoveryClientRouteDefinitionLocator(discoveryClient, properties);
     }
 
 }
