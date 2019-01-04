@@ -22,6 +22,7 @@ public class Product implements Serializable {
     private String id;
     private String name;
 
+    @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     @CommandHandler
     public Product(CreateProductCommand command) {
         LOG.debug("Command: 'CreateProductCommand' received.");
