@@ -20,10 +20,10 @@ class InventoryRoutes {
     @Bean
     RouterFunction<ServerResponse> routes() {
         return nest(
-                path("/products"),
+                path("/inventory"),
                 nest(
                         accept(APPLICATION_JSON),
-                        route(POST("/")
+                        route(POST("/products")
                                 .and(contentType(APPLICATION_JSON)), handler::createProduct)
                 )
         );

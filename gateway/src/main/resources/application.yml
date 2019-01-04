@@ -8,13 +8,13 @@ spring:
         - id: INVENTORY-COMMAND
           uri: http://localhost:9001
           predicates:
-            - Path=/inventory/
+            - Path=/inventory/products
             - Method=POST
 
         - id: INVENTORY-QUERY
           uri: http://localhost:9000
           predicates:
-            - Path=/inventory/
+            - Path=/inventory/products
             - Method=GET
       discovery:
         locator:
