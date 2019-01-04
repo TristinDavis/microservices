@@ -6,11 +6,11 @@ import org.springframework.util.Assert;
 
 @SuppressWarnings("WeakerAccess")
 @Getter
-public abstract class InventoryCommand<T> {
+public abstract class InventoryCommand<ID> {
     @TargetAggregateIdentifier
-    public final T id;
+    public final ID id;
 
-    public InventoryCommand(T id) {
+    public InventoryCommand(ID id) {
         Assert.notNull(id, "Id cannot be null");
         this.id = id;
     }

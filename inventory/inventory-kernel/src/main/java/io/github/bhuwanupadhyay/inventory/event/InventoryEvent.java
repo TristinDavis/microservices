@@ -4,11 +4,11 @@ import lombok.Getter;
 
 @SuppressWarnings("WeakerAccess")
 @Getter
-public abstract class InventoryEvent<T> {
+public abstract class InventoryEvent<ID> {
 
-    public final T id;
+    public final ID id;
 
-    public InventoryEvent(T id) {
+    public InventoryEvent(ID id) {
         if (id == null) {
             throw new IllegalArgumentException("Id cannot be null");
         }
