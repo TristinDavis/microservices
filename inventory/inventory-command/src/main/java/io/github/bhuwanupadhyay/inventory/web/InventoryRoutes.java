@@ -1,4 +1,4 @@
-package io.github.bhuwanupadhyay.inventory.command;
+package io.github.bhuwanupadhyay.inventory.web;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -13,7 +13,7 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 
 @Configuration
 @RequiredArgsConstructor
-class Routes {
+class InventoryRoutes {
 
     private final InventoryWebHandler handler;
 

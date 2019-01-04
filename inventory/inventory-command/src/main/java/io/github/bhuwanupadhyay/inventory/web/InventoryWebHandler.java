@@ -1,17 +1,16 @@
-package io.github.bhuwanupadhyay.inventory.command;
+package io.github.bhuwanupadhyay.inventory.web;
 
-import io.github.bhuwanupadhyay.inventory.command.commands.CreateProductCommand;
-import io.github.bhuwanupadhyay.inventory.utils.Asserts;
+import io.github.bhuwanupadhyay.inventory.command.CreateProductCommand;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.axonframework.commandhandling.CommandBus;
 import org.axonframework.commandhandling.CommandExecutionException;
-import org.axonframework.commandhandling.gateway.CommandGateway;
+import org.axonframework.commandhandling.GenericCommandMessage;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
 
-import java.util.Arrays;
 import java.util.UUID;
 
 import static org.springframework.web.reactive.function.server.ServerResponse.badRequest;
@@ -22,7 +21,7 @@ import static org.springframework.web.reactive.function.server.ServerResponse.ok
 @Slf4j
 class InventoryWebHandler {
 
-    private final CommandGateway gateway;
+    private final CommandBus commandBus;
 
     Mono<ServerResponse> createProduct(ServerRequest request) {
         LOG.debug("Creating product [{}]", request.attributes());
@@ -30,9 +29,8 @@ class InventoryWebHandler {
                 .flatMap(productRequest -> {
                     String name = productRequest.getName();
                     String id = newId();
-                    Asserts.INSTANCE.areNotEmpty(Arrays.asList(id, name));
                     CreateProductCommand command = new CreateProductCommand(id, name);
-                    gateway.sendAndWait(command);
+                    commandBus.dispatch(new GenericCommandMessage<>(command));
                     LOG.info("Created product [{}] '{}'", id, name);
                     return ok().build();
                 })

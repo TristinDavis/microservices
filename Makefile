@@ -22,3 +22,5 @@ infra:
 	docker-compose rm && docker-compose up
 rabbit:
 	docker-compose rm rabbitmq && docker-compose up rabbitmq
+mongo:
+	docker-compose rm mongo && docker-compose up mongo
