@@ -1,7 +1,7 @@
 package io.github.bhuwanupadhyay.inventory;
 
 import lombok.Getter;
-import org.axonframework.commandhandling.TargetAggregateIdentifier;
+import org.axonframework.modelling.command.TargetAggregateIdentifier;
 import org.springframework.util.Assert;
 
 @Getter

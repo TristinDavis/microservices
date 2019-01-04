@@ -24,3 +24,5 @@ rabbit:
 	docker-compose rm rabbitmq && docker-compose up rabbitmq
 mongo:
 	docker-compose rm mongo && docker-compose up mongo
+axon:
+	docker-compose rm axonserver && docker-compose up axonserver

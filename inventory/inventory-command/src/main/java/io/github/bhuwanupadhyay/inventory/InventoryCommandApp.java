@@ -15,9 +15,5 @@ public class InventoryCommandApp {
         SpringApplication.run(InventoryCommandApp.class, args);
     }
 
-    @Bean
-    public CommandBus commandBus() {
-        return new SimpleCommandBus();
-    }
 
 }

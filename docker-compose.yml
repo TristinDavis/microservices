@@ -34,3 +34,8 @@ services:
     image: mongo
     ports:
       - "27017:27017"
+
+  axonserver:
+    image: axoniq/axonserver
+    ports:
+      - "8124:8124"

@@ -3,6 +3,11 @@ plugins {
     id 'org.springframework.boot' version '2.0.6.RELEASE'
 }
 
+ext {
+    axonVersion = '3.4.2'
+}
+
+
 apply plugin: 'java'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: "com.bmuschko.docker-spring-boot-application"
@@ -14,13 +19,12 @@ targetCompatibility = JavaVersion.VERSION_1_8
 dependencies {
     compile project(":inventory:inventory-kernel")
 
-    compile 'org.axonframework:axon-amqp:3.4.2'
-    compile 'org.axonframework:axon-mongo:3.4.2'
+    compile "org.axonframework:axon-spring-boot-starter:4.0.3"
+    compile "org.axonframework:axon-mongo:${axonVersion}"
 
     compile 'org.springframework.cloud:spring-cloud-starter'
     compile 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 
-    compile group: 'org.axonframework', name: 'axon-spring-boot-starter', version: '4.0.3'
     compile 'org.springframework.boot:spring-boot-starter-webflux'
     compile 'org.springframework.boot:spring-boot-starter-amqp'
     compile 'org.springframework.boot:spring-boot-starter-actuator'
@@ -30,6 +34,7 @@ dependencies {
 
     compileOnly 'org.projectlombok:lombok'
     testCompileOnly 'org.projectlombok:lombok'
+
     testCompile 'org.assertj:assertj-core:3.11.1'
     testCompile 'org.mockito:mockito-junit-jupiter:2.23.0'
     testCompile 'org.junit.jupiter:junit-jupiter-engine:5.1.0'
@@ -37,7 +42,7 @@ dependencies {
     testCompile 'org.springframework.boot:spring-boot-starter-test'
     testCompile 'io.projectreactor:reactor-test'
     testCompile 'io.rest-assured:rest-assured:3.2.0'
-    testCompile 'org.axonframework:axon-test:3.4.2'
+    testCompile "org.axonframework:axon-test:${axonVersion}"
 
 }
 
