@@ -1,6 +1,5 @@
 package io.github.bhuwanupadhyay.inventory.command;
 
-import io.github.bhuwanupadhyay.inventory.InventoryCommand;
 import lombok.Getter;
 
 @Getter

@@ -1,4 +1,4 @@
-package io.github.bhuwanupadhyay.inventory;
+package io.github.bhuwanupadhyay.inventory.aggregate;
 
 import io.github.bhuwanupadhyay.inventory.command.CreateProductCommand;
 import io.github.bhuwanupadhyay.inventory.event.ProductCreatedEvent;
@@ -22,7 +22,6 @@ public class Product implements Serializable {
     private String id;
     private String name;
 
-    @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     @CommandHandler
     public Product(CreateProductCommand command) {
         LOG.debug("Command: 'CreateProductCommand' received.");

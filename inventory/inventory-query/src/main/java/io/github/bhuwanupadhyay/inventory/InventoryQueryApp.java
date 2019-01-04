@@ -1,4 +1,4 @@
-package io.github.bhuwanupadhyay.inventory.query;
+package io.github.bhuwanupadhyay.inventory;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

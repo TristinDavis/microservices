@@ -1,4 +1,4 @@
-package io.github.bhuwanupadhyay.inventory.config;
+package io.github.bhuwanupadhyay.inventory;
 
 import com.mongodb.MongoClient;
 import org.axonframework.eventsourcing.eventstore.EventStorageEngine;
