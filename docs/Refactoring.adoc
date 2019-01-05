@@ -21,7 +21,10 @@
 * Express all the ideas the authors want to express
 * Minimize classes and methods
 
-"```Leave your code better than you found it.```" - Boy Scout
+[source]
+----
+"Leave your code better than you found it." - Boy Scout
+----
 
 == Refactoring Tips
 * Keep Refactoring Small
@@ -35,8 +38,10 @@
 
 == Premature Optimization
 
-"```Premature optimization is the root of all [software] evil.```" - Donal Knuth
-
+[source]
+----
+"Premature optimization is the root of all [software] evil." - Donal Knuth
+----
 * Avoid over-engineering - Follow YAGNI
 * Don't spend more time on refactoring than on delivering value - Avoid Gold-Plating your code
 
