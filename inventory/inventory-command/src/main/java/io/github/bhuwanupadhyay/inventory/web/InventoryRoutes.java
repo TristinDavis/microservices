@@ -10,6 +10,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static org.springframework.web.reactive.function.server.RequestPredicates.*;
 import static org.springframework.web.reactive.function.server.RouterFunctions.nest;
 import static org.springframework.web.reactive.function.server.RouterFunctions.route;
+import static org.springframework.web.reactive.function.server.ServerResponse.ok;
 
 @Configuration
 @RequiredArgsConstructor
@@ -25,6 +26,7 @@ class InventoryRoutes {
                         accept(APPLICATION_JSON),
                         route(POST("/products")
                                 .and(contentType(APPLICATION_JSON)), handler::createProduct)
+                                .and(route(GET("/"), req -> ok().syncBody("{ \"status\" : \"UP\"}")))
                 )
         );
     }
