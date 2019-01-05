@@ -3,7 +3,7 @@
 apiTest() {
     CONTAINER_IMAGE=inventory-test-report:latest
 
-    ./../../gradlew clean test
+    ./../../gradlew clean test -Dtest.enabled=true
 
     REPORT_CONTAINER=$(docker ps -a -q --filter "ancestor=${CONTAINER_IMAGE}")
 

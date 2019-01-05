@@ -30,6 +30,8 @@ dependencies {
 }
 
 test {
+    enabled "true".equals(System.getProperty("test.enabled"))
+
     include '**/*InventoryTestParallel*'
     systemProperty "karate.options", System.properties.getProperty("karate.options")
     systemProperty "karate.env", System.properties.getProperty("karate.env")

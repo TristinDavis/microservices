@@ -32,7 +32,7 @@ class InventoryWebHandler {
                     commandGateway.sendAndWait(command);
 
                     LOG.info("Created product [{}] '{}'", id, name);
-                    return ok().build();
+                    return ok().syncBody("{ \"id\" : \"" + id + "\", \"name\" : \"" + name + "\"}");
                 })
                 .doOnError(AssertionError.class, e -> LOG.warn("Create Request FAILED with Message: {}", e.getMessage()))
 
