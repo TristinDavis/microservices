@@ -16,6 +16,8 @@ image:https://docs.microsoft.com/en-us/dotnet/standard/microservices-architectur
 
 image::docs/img/cqrs.jpg[]
 
+image::docs/img/CQRS-Architecture.png[]
+
 "```The purpose of software engineering is to control complexity, not to create it.```" - Dr. Pamela Zave
 
 == Requirement Survival Guide
