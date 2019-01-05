@@ -9,7 +9,7 @@ Feature: payment service
     Given request { name: 'Product Name' }
     When method post
     Then status 200
-    * match response == { id: '#notnull', name: 'Product Name' }
+    And match response == { id: '#notnull', name: 'Product Name' }
     And def id = response.id
 
     * url 'http://localhost:9001/inventory/products'
