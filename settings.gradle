@@ -24,5 +24,3 @@ findProject(':inventory:inventory-kernel')?.name = 'inventory-kernel'
 include 'inventory:qa'
 findProject(':inventory:qa')?.name = 'qa'
 
-include 'qa'
-

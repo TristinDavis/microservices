@@ -12,6 +12,14 @@ apply plugin: 'com.bmuschko.docker-remote-api'
 allprojects {
     group = 'io.github.bhuwanupadhyay'
     version = '1.0-SNAPSHOT'
+    
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        maven {
+            url 'http://repo.spring.io/plugins-release/'
+        }
+    }
 }
 
 import com.bmuschko.gradle.docker.tasks.DockerInfo

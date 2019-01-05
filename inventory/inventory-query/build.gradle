@@ -18,7 +18,7 @@ targetCompatibility = JavaVersion.VERSION_1_8
 
 dependencies {
     compile project(":inventory:inventory-kernel")
-
+    
     compile "org.axonframework:axon-spring-boot-starter:4.0.3"
     compile "org.axonframework:axon-mongo:${axonVersion}"
 
@@ -60,11 +60,6 @@ dependencyManagement {
 [bootJar, bootRun]*.enabled = true
 jar.enabled = false
 
-repositories {
-    jcenter()
-    mavenLocal()
-    mavenCentral()
-}
 docker {
     springBootApplication {
         baseImage = 'openjdk:8-jre-alpine'

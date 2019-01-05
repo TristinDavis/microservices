@@ -18,6 +18,8 @@ dependencies {
     compile 'org.springframework.retry:spring-retry'
     compile 'org.springframework.boot:spring-boot-starter-actuator'
 
+    compile 'com.aries:docker-java-shaded:3.1.0-rc-5'
+
     testCompileOnly "org.projectlombok:lombok"
     testCompile 'org.assertj:assertj-core:3.11.1'
     testCompile 'org.mockito:mockito-junit-jupiter:2.23.0'
@@ -37,12 +39,6 @@ dependencyManagement {
 
 [bootJar, bootRun]*.enabled = true
 jar.enabled = false
-
-repositories {
-    jcenter()
-    mavenLocal()
-    mavenCentral()
-}
 
 docker {
     springBootApplication {
