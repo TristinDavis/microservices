@@ -48,3 +48,30 @@
 == Refactoring and Tests
 * Treat Tests like Production Code
 * Keep Them DRY, but Expressive
+
+---
+
+
+=== Bloating Code Smells
+
+=== Obfuscating Code Smells
+
+=== Object Orientation Abuser Code Smells
+
+=== Code Smells: Change Preventer
+
+=== Code Smells: Dispensables
+
+=== Code Smells: The Couplers
+
+=== Environment and Testing Code Smells
+
+=== Method Refactorings
+
+=== Class and Object Refactorings
+
+=== Class Hierarchy Refactorings
+
+=== Pattern Based Refactorings
+
+=== Gilded Roses Kata
