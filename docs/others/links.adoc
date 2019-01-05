@@ -25,3 +25,7 @@
 === EVENT STORMING
 - https://realtimeboard.com/
 - https://github.com/mariuszgil/awesome-eventstorming
+
+=== REST Modeling
+- https://raml.org/developers/design-your-api
+- https://restlet.com/open-source/downloads/current/

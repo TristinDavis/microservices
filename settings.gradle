@@ -20,7 +20,8 @@ include 'inventory:inventory-command'
 findProject(':inventory:inventory-command')?.name = 'inventory-command'
 include 'inventory:inventory-kernel'
 findProject(':inventory:inventory-kernel')?.name = 'inventory-kernel'
-
 include 'inventory:qa'
 findProject(':inventory:qa')?.name = 'qa'
+include 'inventory:inventory-api-design'
+findProject(':inventory:inventory-api-design')?.name = 'inventory-api-design'
 

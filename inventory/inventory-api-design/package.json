@@ -1,0 +1,17 @@
+{
+  "name": "inventory-api-design",
+  "version": "1.0.0",
+  "description": "inventory api documentation",
+  "main": "swagger.js",
+  "scripts": {
+    "serve": "node swagger.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "swagger-jsdoc": "^3.2.6",
+    "swagger-ui-express": "^4.0.2",
+    "yamljs": "^0.3.0"
+  }
+}
