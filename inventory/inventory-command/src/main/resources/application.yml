@@ -2,7 +2,7 @@ spring:
   application:
     name: inventory-command
 server:
-  port: 0
+  port: 9000
 eureka:
   instance:
     lease-renewal-interval-in-seconds: 3

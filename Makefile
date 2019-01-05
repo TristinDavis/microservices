@@ -11,6 +11,8 @@ unit:
 	$(MAKE) jooq && \
 	$(MAKE) proto && \
 	./gradlew test
+build:
+	./gradlew clean build dockerBuildImage
 ui:
 	cd web && \
 	ng serve --open

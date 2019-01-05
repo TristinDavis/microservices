@@ -1,3 +1,5 @@
+server:
+  port: 8080
 logging:
   file: logs/inventory_command.production.log
   pattern:

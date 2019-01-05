@@ -28,3 +28,6 @@ hs_err_pid*
 !gradle-wrapper.jar
 **/src/main/generated/**
 logs/**
+**/target/*
+**/build/*
+**/out/**
