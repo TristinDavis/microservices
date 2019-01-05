@@ -63,8 +63,8 @@ jar.enabled = false
 repositories {
     jcenter()
     mavenLocal()
+    mavenCentral()
 }
-
 docker {
     springBootApplication {
         baseImage = 'openjdk:8-jre-alpine'

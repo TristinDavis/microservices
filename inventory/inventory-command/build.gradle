@@ -58,6 +58,7 @@ jar.enabled = false
 repositories {
     jcenter()
     mavenLocal()
+    mavenCentral()
 }
 
 docker {
