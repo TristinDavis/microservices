@@ -1,8 +1,9 @@
 spring:
-  datasource:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:~/db/idm_db
-    username: sa
-    password:
-  jooq:
-    sql-dialect: h2
+  application:
+    name: idm
+server:
+  port: 9002
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 3
+    lease-expiration-duration-in-seconds: 5

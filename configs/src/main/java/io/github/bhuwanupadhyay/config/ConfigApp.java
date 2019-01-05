@@ -13,7 +13,7 @@ public class ConfigApp {
 
     public static void main(String[] args) {
         new SpringApplicationBuilder(ConfigApp.class)
-                .web(WebApplicationType.SERVLET)
+                .web(WebApplicationType.REACTIVE)
                 .run(args);
     }
 
