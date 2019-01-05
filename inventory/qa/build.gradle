@@ -7,11 +7,6 @@ buildscript {
 
 apply plugin: 'java'
 
-repositories {
-    mavenLocal()
-    mavenCentral()
-}
-
 sourceSets {
     test {
         java {
@@ -35,7 +30,7 @@ dependencies {
 }
 
 test {
-    include '**/*DemoTestParallel*'
+    include '**/*InventoryTestParallel*'
     systemProperty "karate.options", System.properties.getProperty("karate.options")
     systemProperty "karate.env", System.properties.getProperty("karate.env")
     outputs.upToDateWhen { false }
