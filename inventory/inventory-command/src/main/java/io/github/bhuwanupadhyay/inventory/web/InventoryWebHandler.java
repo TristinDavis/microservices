@@ -36,11 +36,11 @@ class InventoryWebHandler {
                 })
                 .doOnError(AssertionError.class, e -> LOG.warn("Create Request FAILED with Message: {}", e.getMessage()))
 
-                .onErrorResume(AssertionError.class, e -> badRequest().build())
+                .onErrorResume(AssertionError.class, e -> badRequest().syncBody(e.getMessage()))
 
                 .doOnError(CommandExecutionException.class, e -> LOG.warn("Create Command FAILED with Message: {}", e.getMessage()))
 
-                .onErrorResume(CommandExecutionException.class, e -> badRequest().build());
+                .onErrorResume(CommandExecutionException.class, e -> badRequest().syncBody(e.getMessage()));
     }
 
     private String newId() {
