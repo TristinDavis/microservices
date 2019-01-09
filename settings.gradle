@@ -1,5 +1,5 @@
 rootProject.name = 'microservices'
-
+include 'buildSrc'
 include 'eureka'
 include 'configs'
 include 'gateway'
@@ -24,4 +24,5 @@ include 'inventory:qa'
 findProject(':inventory:qa')?.name = 'qa'
 include 'inventory:inventory-api-design'
 findProject(':inventory:inventory-api-design')?.name = 'inventory-api-design'
+
 
