@@ -1,31 +1,19 @@
-plugins {
-    id 'java'
-    id 'org.hidetake.swagger.generator' version '2.16.0'
-}
-sourceCompatibility = JavaVersion.VERSION_1_8
-targetCompatibility = JavaVersion.VERSION_1_8
-
-apply plugin: "org.hidetake.swagger.generator"
-
-dependencies {
-    compile 'io.swagger:swagger-annotations:1.5.10'
-    swaggerCodegen 'io.swagger.codegen.v3:swagger-codegen-cli:3.0.0'
-}
-
-swaggerSources {
-    inventory {
-        inputFile = file("$projectDir/docs/products.yml")
-        code {
-            language = 'java'
-            configFile = file('config.json')
-            components = ['models', 'apis']
-            dependsOn validation
-        }
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.openapitools:openapi-generator-gradle-plugin:3.3.4"
     }
 }
 
-compileJava.dependsOn swaggerSources.inventory.code
-sourceSets.main.java.srcDir "${swaggerSources.inventory.code.outputDir}/src/main/java"
-sourceSets.main.resources.srcDir "${swaggerSources.inventory.code.outputDir}/src/main/resources"
+plugins {
+    id 'java'
+}
 
+apply plugin: 'org.openapi.generator'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
 
