@@ -17,3 +17,19 @@ apply plugin: 'org.openapi.generator'
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
+openApiGenerate {
+    generatorName = "java"
+    inputSpec = "${project.projectDir}/specs/v1.0/inventory.yml".toString()
+    outputDir = "${project.buildDir}/generated".toString()
+    apiPackage = "io.github.bhuwanupadhyay.inventory.api"
+    invokerPackage = "io.github.bhuwanupadhyay.inventory.invoker"
+    modelPackage = "io.github.bhuwanupadhyay.inventory.model"
+    modelFilesConstrainedTo = [
+            "Error"
+    ]
+    configOptions = [
+            dateLibrary: "java8"
+    ]
+}
+
+compileJava.dependsOn tasks.openApiGenerate
