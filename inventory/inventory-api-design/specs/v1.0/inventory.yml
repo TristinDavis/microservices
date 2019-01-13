@@ -5,7 +5,6 @@ info:
   description: API for inventory management
 paths:
   /products:
-
     post:
       tags:
         - product
@@ -21,8 +20,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'create-product-success-response.yml'
-
+                $ref: 'create-product-response.yml'
     get:
       tags:
         - product
@@ -33,7 +31,4 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'product-resource.yml'
-
-
-        
+                $ref: 'product-response.yml'

@@ -17,19 +17,52 @@ apply plugin: 'org.openapi.generator'
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
+def version = "v1.0"
+def apiDir = "api-" + version
+
 openApiGenerate {
     generatorName = "java"
-    inputSpec = "${project.projectDir}/specs/v1.0/inventory.yml".toString()
-    outputDir = "${project.buildDir}/generated".toString()
+    inputSpec = ("${project.projectDir}/specs/" + version + "/inventory.yml").toString()
+    outputDir = ("${project.projectDir}/" + apiDir).toString()
+
     apiPackage = "io.github.bhuwanupadhyay.inventory.api"
     invokerPackage = "io.github.bhuwanupadhyay.inventory.invoker"
     modelPackage = "io.github.bhuwanupadhyay.inventory.model"
+
     modelFilesConstrainedTo = [
-            "Error"
     ]
     configOptions = [
             dateLibrary: "java8"
     ]
 }
 
-compileJava.dependsOn tasks.openApiGenerate
+tasks.create(name: 'beforeGenerate') << {
+    project.delete(apiDir)
+    project.mkdir(apiDir)
+}
+
+tasks.create(name: 'afterGenerate') << {
+    def tree = fileTree(dir: apiDir, excludes: ['**/*.java', 'build.kts'])
+    tree.getFiles().forEach {
+        file -> file.delete()
+    }
+    project.delete(apiDir + "/docs")
+    project.delete(apiDir + "/.openapi-generator")
+    project.delete(apiDir + "/gradle")
+    project.delete(apiDir + "/docs")
+    project.delete(apiDir + "/.gitignore")
+
+    project.copy {
+        def rootDirectory = project.projectDir.getAbsolutePath() + "/" + apiDir
+
+        into rootDirectory + '/src/test'
+
+        from(rootDirectory + '/src/main') {
+            include '**/*.java'
+        }
+    }
+
+    project.delete(apiDir + "/src/main/java/io/github/bhuwanupadhyay/inventory/api")
+    project.delete(apiDir + "/src/main/java/io/github/bhuwanupadhyay/inventory/invoker")
+    project.delete(apiDir + "/src/test/java/io/github/bhuwanupadhyay/inventory/model")
+}

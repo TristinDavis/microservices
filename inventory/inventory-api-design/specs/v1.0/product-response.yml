@@ -1,6 +1,6 @@
 type: object
-title: product resource
-description: product resource in inventory.
+title: product response
+description: product response in inventory.
 properties:
   id:
     type: string

@@ -23,4 +23,6 @@ include 'inventory:qa'
 findProject(':inventory:qa')?.name = 'qa'
 include 'inventory:inventory-api-design'
 findProject(':inventory:inventory-api-design')?.name = 'inventory-api-design'
+include 'inventory:inventory-api-design:api-v1.0'
+findProject(':inventory:inventory-api-design:api-v1.0')?.name = 'api-v1.0'
 
