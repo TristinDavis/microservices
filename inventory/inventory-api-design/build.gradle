@@ -16,8 +16,8 @@ apply plugin: 'org.openapi.generator'
 
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
-
-def version = "v1.0"
+def version_prefix = "v1"
+def version = version_prefix + ".0"
 def apiDir = "api-" + version
 
 openApiGenerate {
@@ -25,9 +25,9 @@ openApiGenerate {
     inputSpec = ("${project.projectDir}/specs/" + version + "/inventory.yml").toString()
     outputDir = ("${project.projectDir}/" + apiDir).toString()
 
-    apiPackage = "io.github.bhuwanupadhyay.inventory.api"
-    invokerPackage = "io.github.bhuwanupadhyay.inventory.invoker"
-    modelPackage = "io.github.bhuwanupadhyay.inventory.model"
+    apiPackage = "io.github.bhuwanupadhyay.inventory" + version_prefix + ".api"
+    invokerPackage = "io.github.bhuwanupadhyay.inventory" + version_prefix + ".invoker"
+    modelPackage = "io.github.bhuwanupadhyay.inventory" + version_prefix + ".model"
 
     modelFilesConstrainedTo = [
     ]
@@ -62,7 +62,7 @@ tasks.create(name: 'afterGenerate') << {
         }
     }
 
-    project.delete(apiDir + "/src/main/java/io/github/bhuwanupadhyay/inventory/api")
-    project.delete(apiDir + "/src/main/java/io/github/bhuwanupadhyay/inventory/invoker")
-    project.delete(apiDir + "/src/test/java/io/github/bhuwanupadhyay/inventory/model")
+    project.delete(apiDir + "/src/main/java/io/github/bhuwanupadhyay/inventory/"+ version_prefix +"/api")
+    project.delete(apiDir + "/src/main/java/io/github/bhuwanupadhyay/inventory/"+ version_prefix +"/invoker")
+    project.delete(apiDir + "/src/test/java/io/github/bhuwanupadhyay/inventory/"+ version_prefix +"/model")
 }
